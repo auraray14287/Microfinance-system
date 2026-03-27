@@ -1,0 +1,118 @@
+<?php
+
+namespace App\Filament\Pages;
+
+use Filament\Pages\Page;
+use App\Models\Member;
+use App\Models\Group;
+use App\Models\Saving;
+use App\Models\Loan;
+
+class MemberReportPage extends Page
+{
+    protected static ?string $navigationIcon  = 'heroicon-o-user-circle';
+    protected static ?string $navigationGroup = 'Reports';
+    protected static ?string $navigationLabel = 'Member Report';
+    protected static ?int    $navigationSort  = 1;
+    protected static string  $view            = 'filament.pages.reports.member-report';
+
+    // Filters
+    public string  $search      = '';
+    public string  $group_id    = '';
+    public string  $status      = '';
+    public string  $gender      = '';
+    public string  $date_from   = '';
+    public string  $date_to     = '';
+
+    // Results
+    public array   $members     = [];
+    public bool    $searched    = false;
+
+    public array   $groups      = [];
+
+    public function mount(): void
+    {
+        $user_g = auth()->user();
+        $gq = Group::orderBy('name');
+        if (!$user_g->hasRole('super_admin')) {
+            $gq->where('assigned_officer', $user_g->id);
+        }
+        $this->groups = $gq->get(['id', 'name'])->toArray();
+        $this->date_from = now()->startOfYear()->format('Y-m-d');
+        $this->date_to   = now()->format('Y-m-d');
+        $this->runReport();
+    }
+
+    // Auto-rerun whenever any filter property changes (live search, dropdowns, dates)
+    public function updated(string $property): void
+    {
+        // Skip re-running for non-filter internal properties
+        if (!in_array($property, ['members','loans','repayments','savings','defaulters','groups','loanTypes','searched'])) {
+            $this->runReport();
+        }
+    }
+
+    public function runReport(): void
+    {
+        $user  = auth()->user();
+        $query = Member::with(['groups', 'loans', 'savings']);
+
+        if (!$user->hasRole('super_admin')) {
+            $groupIds = Group::where('assigned_officer', $user->id)->pluck('id');
+            $query->whereIn('group_id', $groupIds);
+        }
+
+        if ($this->search) {
+            $query->where(function ($q) {
+                $q->where('first_name',  'like', '%'.$this->search.'%')
+                  ->orWhere('last_name',  'like', '%'.$this->search.'%')
+                  ->orWhere('id_number',  'like', '%'.$this->search.'%')
+                  ->orWhere('mobile_no',  'like', '%'.$this->search.'%');
+            });
+        }
+        if ($this->group_id)  $query->where('group_id',  $this->group_id);
+        if ($this->status)    $query->where('status',    $this->status);
+        if ($this->gender)    $query->where('gender',    $this->gender);
+        if ($this->date_from) $query->whereDate('created_at', '>=', $this->date_from);
+        if ($this->date_to)   $query->whereDate('created_at', '<=', $this->date_to);
+
+        $results = $query->orderBy('first_name')->get();
+
+        $this->members = $results->map(function ($m) {
+            $totalSavings    = $m->savings->sum('amount');
+            $activeLoans     = $m->loans->whereIn('loan_status', ['approved', 'partially_paid', 'defaulted']);
+            $totalLoanBal    = $activeLoans->sum('balance');
+            return [
+                'id'           => $m->id,
+                'name'         => trim("{$m->first_name} {$m->middle_name} {$m->last_name}"),
+                'id_number'    => $m->id_number,
+                'mobile'       => $m->mobile_no,
+                'gender'       => ucfirst($m->gender ?? ''),
+                'status'       => $m->status,
+                'group'        => $m->groups->pluck('name')->join(', ') ?: (Group::find($m->group_id)?->name ?? '—'),
+                'joined'       => $m->created_at?->format('d M Y'),
+                'savings'      => $totalSavings,
+                'loan_balance' => $totalLoanBal,
+                'loan_count'   => $activeLoans->count(),
+            ];
+        })->toArray();
+
+        $this->searched = true;
+    }
+
+    public function resetFilters(): void
+    {
+        $this->search    = '';
+        $this->group_id  = '';
+        $this->status    = '';
+        $this->gender    = '';
+        $this->date_from = now()->startOfYear()->format('Y-m-d');
+        $this->date_to   = now()->format('Y-m-d');
+        $this->runReport();
+    }
+
+    public function getTotalMembersProperty(): int   { return count($this->members); }
+    public function getTotalSavingsProperty(): float  { return collect($this->members)->sum('savings'); }
+    public function getTotalLoanBalProperty(): float  { return collect($this->members)->sum('loan_balance'); }
+    public function getActiveMembersProperty(): int   { return collect($this->members)->where('status', 'active')->count(); }
+}

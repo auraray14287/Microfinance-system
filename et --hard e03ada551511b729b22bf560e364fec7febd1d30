@@ -1,0 +1,344 @@
+* [33mc3e0f33[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m fix: fix readme steps on creating super-admin
+* [33mff908d9[m chore: cleanups
+* [33mddf8b6d[m chore: added pmec calculator
+* [33m919a048[m fix: fix typos on pre-approvals forms
+* [33mbfe9f1d[m fix:fix issue on conflicting middlewares
+* [33me1656fe[m fix: fix issue on redirecting too many times
+* [33ma09345f[m feat: added payroll module
+* [33mbad0acf[m chore: net pay can be negative
+* [33m7f48b6f[m chore: fix issue on logo and log out session expires
+* [33m87d2e2b[m chore: borrower loan application and fix issue on profile completeness
+* [33ma72d70f[m fix: fix circular dependabcy on branches
+* [33mfa73363[m fix: fix issue on active routes
+* [33m0872eb1[m feat: add profile completion
+* [33m8447964[m chore: update Landing page
+* [33m7c19fa6[m chore: update Landing page
+* [33m9eed3ea[m chore: update Landing page
+* [33m500e019[m chore: add open params in .env.example
+* [33m8c3e87d[m fix: resolves #54
+* [33mb865427[m fix: this resolves #56
+* [33m81ec4ff[m chore: added branch id and organization_id in assets and asset categories tables
+* [33m760e2af[m chore: show loans atached to the borrower
+* [33m272da09[m feat: integrate AI-powered credit scoring system
+* [33m2a85f52[m chore: Added cash-Flow Page
+* [33m89af4f5[m chore: Add ERS
+* [33mef82045[m chore: Add Statement of Comprehensive Income
+* [33m672f0de[m chore: Fix Issue on reducing balance
+* [33md1aba3e[m chore: added Assets
+* [33mf7d6a8b[m chore: added Asset Categories
+* [33mdefab5b[m fix: payment expires at logic simplified
+* [33meb7e3b3[m fix: fix middleware subscription
+*   [33m5f07008[m Merge pull request #53 from Shaeton/patch-1
+[32m|[m[33m\[m  
+[32m|[m * [33me4ac8c0[m Update UserResource.php
+[32m|[m[32m/[m  
+* [33m0ae1853[m chore: Users Emails should be unique
+* [33m6638821[m fix: users emails should be unique
+* [33mbd4c36e[m fix: create unlimited users
+* [33ma40db42[m chore: remove helperText on creating a branch
+* [33m2ae1ac3[m fix: revert removing branch manager as optional
+* [33mb7b97bd[m chore: branch manager should be optional
+* [33mc8e4f7d[m chore: revert creating borrowers as users
+* [33mbe97869[m chore: disable subscriptions in the drawer
+* [33m57795c8[m disable editing and deleting of the super-admin role
+* [33m041228d[m Merge branch 'main' of https://github.com/chandachewe10/lms-development-features
+*   [33mc4e1181[m Merge branch 'main' of https://github.com/chandachewe10/lms-development-features
+[34m|[m[35m\[m  
+[34m|[m * [33m99439e5[m Disabled Email verification
+[34m|[m *   [33m0c9d364[m Merge branch 'main' of https://github.com/chandachewe10/lms-development-features
+[34m|[m [36m|[m[1;31m\[m  
+[34m|[m * [1;31m|[m [33m7ad19f9[m Update README.md
+[34m|[m * [1;31m|[m [33m67f7f7e[m Update README.md
+[34m|[m * [1;31m|[m [33mf98a68d[m Update README.md
+* [1;31m|[m [1;31m|[m [33mea38a86[m remove verify email
+* [1;31m|[m [1;31m|[m [33m83af073[m fix: cleanups
+* [1;31m|[m [1;31m|[m [33m4e00348[m fix: show main branch when editing a user
+* [1;31m|[m [1;31m|[m [33m518cbe9[m chore: when listing users sho their respective branches
+* [1;31m|[m [1;31m|[m [33mf374bd9[m fix: fix issue in showing borrower files
+* [1;31m|[m [1;31m|[m [33mc181b89[m fix: show payments dates in human readable format
+* [1;31m|[m [1;31m|[m [33m06a1e47[m fix:remove unnecessary comments
+* [1;31m|[m [1;31m|[m [33m60dcafe[m fix: remove unnecessary comments on Branches Policy
+* [1;31m|[m [1;31m|[m [33mcad12d3[m chore: roles in the organization should be the same
+* [1;31m|[m [1;31m|[m [33m90311ca[m fix: fix issue on switching to the new branch
+* [1;31m|[m [1;31m|[m [33mfd9b575[m chore: added policies to AuthServiceProvider
+* [1;31m|[m [1;31m|[m [33m64e3089[m chore: assign branch name to the user upon adding a user to the system
+* [1;31m|[m [1;31m|[m [33m25d71ae[m chore: add Branch observer to providers
+* [1;31m|[m [1;31m|[m [33ma92071d[m fix: email and roles are supposed to be required when adding a user
+* [1;31m|[m [1;31m|[m [33m64bc31a[m fix: fix plural  icons on switch branches
+* [1;31m|[m [1;31m|[m [33m7de3744[m chore: save organization id upon creating a branch
+* [1;31m|[m [1;31m|[m [33mecb720f[m chore: added branch_ids in observers
+* [1;31m|[m [1;31m|[m [33m8d6e12b[m chore: added branch_ids on observers
+* [1;31m|[m [1;31m|[m [33m4470bdf[m chore: added switching branches module
+* [1;31m|[m [1;31m|[m [33ma7e0d20[m fix: changed dashboard title to show the current branch
+* [1;31m|[m [1;31m|[m [33m0c15e64[m fix: fix issue on creating branch manager
+* [1;31m|[m [1;31m|[m [33m8dae44c[m chore: added branch ids in each table
+* [1;31m|[m [1;31m|[m [33md3ee82d[m chore: added branch resource
+* [1;31m|[m [1;31m|[m [33mb769f6d[m chore: added branches model
+* [1;31m|[m [1;31m|[m [33mcf0cc52[m fix: fix issue on loan roll over
+* [1;31m|[m [1;31m|[m [33mc853791[m fix: fix issue on redirect
+* [1;31m|[m [1;31m|[m [33m47b429f[m chore: changed model plurals on loan restructure
+* [1;31m|[m [1;31m|[m [33m1fd9c9a[m chore: added loan restructuring
+* [1;31m|[m [1;31m|[m [33m3b8dde9[m fix: loan type should change live
+* [1;31m|[m [1;31m|[m [33m007d503[m chore: show service & penalty percentage and amount on the table
+* [1;31m|[m [1;31m|[m [33mdc3e2c9[m chore: added migrations for service fee and penalties in the loan types table
+* [1;31m|[m [1;31m|[m [33m610d352[m chore: added service and penalties fields on loan types
+* [1;31m|[m [1;31m|[m [33ma7175ba[m chore: added service fee as a percentage as well adding penalties
+[1;31m|[m [1;31m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;31m|[m   
+* [1;31m|[m [33mccadb85[m chore: exclude settlement forms on push
+* [1;31m|[m [33m874827e[m chore: on creating a borrower add login credentials for the borrower
+* [1;31m|[m [33m43ce360[m chore: borrower email should be required
+* [1;31m|[m [33m1ced9b9[m chore: repayment example csv should be atleast double digit
+* [1;31m|[m [33m062acf9[m fix: correct pricing on home page
+* [1;31m|[m [33mf2b5c00[m fix: updated the landing page
+* [1;31m|[m [33m67a1fc3[m fix: fix issue on activity logs
+* [1;31m|[m [33m9d898eb[m fix: updated payments amounts
+* [1;31m|[m [33m2c6a3da[m fix: replaced demo links in readme
+* [1;31m|[m [33md34ba81[m fix: cleanups
+* [1;31m|[m [33md04713a[m fix: cleanups
+* [1;31m|[m [33ma3329cf[m fix: fix issue on organization on wallets
+* [1;31m|[m [33m8ace01c[m fix: add loan requested under pending loans
+* [1;31m|[m [33m9b286f3[m fix: fix issue on sending messages
+* [1;31m|[m [33m56dfbd1[m fix: a wallet cannot be deleted
+* [1;31m|[m [33m5b274b7[m fix: a loan type is required
+* [1;31m|[m [33maca4fa1[m fix: a wallet cannot be deleted
+* [1;31m|[m [33m10475c1[m fix: loan duration is required
+* [1;31m|[m [33mc0cd3dd[m chore: add organization name to the incoming email
+* [1;31m|[m [33m8e6fb9e[m fix: add email verification on sign up
+* [1;31m|[m [33m1c5c4f2[m fix: add 7 days free trial upon company registration
+* [1;31m|[m [33m76a2d8b[m chore: prevent deletion and editing of roles temporarily
+* [1;31m|[m [33m0d96740[m chore: change name to business name on registration
+* [1;31m|[m [33mf4404ac[m chore: on each loan repayment send an email and sms notification
+* [1;31m|[m [33m9273e84[m feat: on registration attach a role of super_admin for each created new user
+* [1;31m|[m [33m9783b96[m chore: show all permissions for the superadmin of each organization
+* [1;31m|[m [33m90e7414[m fix: allow loan editing for approve, rejection, etc
+* [1;31m|[m [33m186d4fb[m chore: added Lenco payments policies
+* [1;31m|[m [33m57ff09f[m chore: integrated  with swiftsms APIs
+* [1;31m|[m [33mfb3d8b8[m fix: Check for expired subscription only for authenticated users
+* [1;31m|[m [33mfe123f4[m chore: add check payments middleware
+* [1;31m|[m [33m1e5ba9b[m chore: added lenco payments gateway
+* [1;31m|[m [33m99725ae[m chore: added lenco payment gateway
+* [1;31m|[m [33m988266e[m chore: added lenco payment gateway
+* [1;31m|[m [33m5b0eeb7[m chore: added payments table for subscriptions
+* [1;31m|[m [33m0a259c7[m fix: update policies
+* [1;31m|[m [33m05e22b7[m chore: add multitenancy on roles and permissions
+* [1;31m|[m [33m1a908d9[m fix: fix issue on calling loanagreementformsobserver
+* [1;31m|[m [33mc5d270e[m feat: add sign in on landing page header
+* [1;31m|[m [33mc76a70d[m chore: implemented multitenancy using global scopes
+* [1;31m|[m [33m36dfed6[m chore: added multitenancy
+* [1;31m|[m [33m7cf76d9[m chore: added multitenancy
+* [1;31m|[m [33m82bb42a[m chore: added observers for Multitenancy
+* [1;31m|[m [33mac292d9[m chore: add organization_id column in all tables
+[1;31m|[m[1;31m/[m  
+* [33m862b21d[m chore: update data after focus on the input field
+* [33ma83d28d[m feat: added sending messages to contacts
+* [33md8fb145[m added dom pdf
+* [33m6f3a725[m feat: added laraveldom pdf
+* [33m63ef2a0[m feat: redirect to list page after bulk repayments upload
+* [33m6549547[m feat: added bulk repayments
+* [33mf283880[m chore: added service fee, damount and loan duration on loans exports
+* [33m88f4c81[m feat: added processing fee
+* [33mc7acd8f[m fix: cleanups on exports
+* [33m2782356[m fix: fix issue on loan exports
+* [33me7f9f27[m feat: added messages exports
+* [33mab72f70[m fix: remove token on thrirdparty exports
+* [33m7c9e157[m feat: added repayments exports
+* [33m05a9b65[m feat: add exports on expenses and expenses category
+* [33m9f54a74[m feat: added transactions wallet
+* [33m3604cab[m fix: disable transfer to the same wallet  and cross currency
+* [33mb7b16ae[m feat: added currency name on table list
+* [33m6af4e23[m chore: add more feature on wallet exports
+* [33ma4ac553[m chore: added loan type exports
+* [33mf819358[m fix: fix exports on borrowers
+* [33m4d8f129[m chore: add notification on each resource created
+* [33m41dfba9[m fix: hide loan number during loan creation
+* [33m223599d[m chore: monitor logs in messages model
+* [33m3952ec0[m chore: add smses sending
+* [33m24bb034[m chore: add activity logs
+*   [33me651b8a[m Merge pull request #51 from chandachewe10/dev
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33md5706a2[m Add fix on transactions limit
+* [1;33m|[m [33m8f3949d[m Merge pull request #50 from chandachewe10/dev
+[1;34m|[m[1;33m\[m[1;33m|[m 
+[1;34m|[m * [33m2035a28[m A loan cannot be edited
+[1;34m|[m * [33md9f99c6[m Throw exception if withdraw exceed sthe amount in the wallet
+[1;34m|[m * [33m14d7daa[m Fix Issue on editing Wallet
+[1;34m|[m * [33m8c8cb78[m A wallet can be edited e.g funded by an investor
+* [1;35m|[m [33m3e650e5[m Update README.md
+* [1;35m|[m [33m3bd6a86[m Create LICENCE
+* [1;35m|[m [33me905132[m Merge pull request #49 from chandachewe10/dev
+[1;36m|[m[1;35m\[m[1;35m|[m 
+[1;36m|[m * [33m57a329c[m Updated README
+[1;36m|[m * [33ma5259a3[m Repayments Cannot be Edited
+[1;36m|[m * [33m15b976e[m A wallet cannot be edited. This solves #46
+[1;36m|[m * [33me87ac6b[m Fix Issue on Creating Role
+* [31m|[m [33m81eb4a9[m Merge pull request #48 from chandachewe10/dev
+[32m|[m[31m\[m[31m|[m 
+[32m|[m * [33mfb28b06[m Fixed Issue on Links From Landing Page
+[32m|[m * [33mbdad141[m Fixed Issue on the width of the simple page
+[32m|[m[32m/[m  
+* [33m4a31457[m Added Demo Link
+* [33me313939[m Added Demo Link
+* [33m1e936f9[m Added Demo Link
+* [33m11152b0[m Added Missing Images In README.md
+* [33m1597c40[m The partially paid Loan is Active
+* [33mfaf15eb[m Added custom LogOut Response
+* [33m8724f87[m Add dashboard template on Front End
+* [33m3b402a1[m Added temporaly Logo
+* [33mcdcba2d[m Updated README
+* [33m0758335[m Add Links to stats
+* [33m5153712[m Linked Landing Page
+* [33m1b593ca[m Add Landing page
+* [33m385d34f[m Login Via Jetstream
+* [33md0e8b03[m Added Landing page
+* [33md11da50[m Update README
+* [33m84cb8f2[m Added Landing page assets
+* [33mb1975f9[m Fix Issue on Tabs going blank
+* [33mca0e12a[m Remove unnecessary pages
+* [33mc5e9560[m Use tabs for loan categories
+* [33me5ea1f8[m Add HasPageShield to pending Loans
+* [33ma9c7aa2[m Policies
+* [33mb5ef1cc[m Show running balance on Loans
+* [33med0c9d7[m Transaction ref can be optional on repayments
+* [33mf30a9d1[m Added View Expense
+* [33mb53cd2b[m Fix Issue on third parties
+* [33mb0534dd[m Show who added a borrower
+* [33mc0fbb64[m Update README.md
+* [33m016ace8[m Remove the Logo
+*   [33m47d83b9[m Merge pull request #29 from bereank/main
+[34m|[m[35m\[m  
+[34m|[m * [33m4ffaf8f[m Use Auth
+[34m|[m * [33m806477f[m Capturing borrow creator
+[34m|[m * [33mfadb895[m Remove dd() on Create Borrower resource and changing added_by relationship to created_by
+[34m|[m * [33mbba891e[m Changing Added By Input in Creating Borrower form from TextInput to Select since TextInput doest not support relationship
+[34m|[m[34m/[m  
+* [33mfd56ab2[m Send the data ASAP
+* [33mbc1a2b8[m Fix Issue on sending emails if third party is not active
+* [33m9df3a02[m Fix Corrupt Loan Word Files
+* [33m70ae9c6[m Fix Issue on image PHP Word
+* [33md99fcbd[m Fix Issue on image PHP Word
+* [33mead426b[m Default if status not found
+* [33m9b3b26b[m Fix Issue on picking wrong borrower
+* [33me9683bf[m Add Favicon
+* [33mcc442ee[m Add company Logo
+* [33mcc57e1e[m Add font-size, spacing of 1.5 and font-style of arial to PHP Word
+* [33mcfb6278[m Notify borrowers via email on each loan stage status
+* [33m872725d[m Add transaction reference on transactions table
+* [33m5e0e6d5[m Add transaction reference on transactions table
+* [33mbb69899[m Disable editing an already approved loan
+* [33ma7bee7c[m Added Bulk Exports
+* [33m3e0ffa7[m Export Borrowers and LoanTypes
+* [33m117d079[m This PR fixes #23
+* [33m3e114c6[m Search borrowers when adding loans
+* [33m2a3ed71[m Exclude all documents files
+*   [33m64a72aa[m Merge pull request #21 from hsemix/develop
+[36m|[m[1;31m\[m  
+[36m|[m * [33md7777b2[m Add default to match expression in LoanResources :bug:
+[36m|[m[36m/[m  
+*   [33m5bd660f[m Merge pull request #20 from chandachewe10/dev
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33ma143434[m Fixed Issue on Expenses Graphs
+[1;32m|[m * [33m77173dc[m Fixed Issue on unhandled mistype
+* [1;33m|[m [33m2df50d8[m Merge pull request #19 from chandachewe10/dev
+[1;34m|[m[1;33m\[m[1;33m|[m 
+[1;34m|[m * [33m33ed5ac[m Fixed Issue on outstanding principal fees and amount disbursed
+[1;34m|[m * [33m8fa1ee1[m Fixed Issue on outstanding principal fees and amount disbursed
+[1;34m|[m * [33m4df1afa[m Fix Issue on expenses
+[1;34m|[m * [33m828e5b6[m Add amount on status SMS@
+* [1;35m|[m [33m66b8dd4[m Merge pull request #18 from chandachewe10/dev
+[1;36m|[m[1;35m\[m[1;35m|[m 
+[1;36m|[m * [33m2357d0f[m Fixed Issue on deducting funds on editing loans
+[1;36m|[m * [33mab5d7a8[m If payment is fully or partially paid add the status
+[1;36m|[m * [33m46c42f1[m Disable editing nd deleteing loan repayments
+* [31m|[m [33m8c0375a[m Merge pull request #17 from chandachewe10/dev
+[32m|[m[31m\[m[31m|[m 
+[32m|[m * [33m4daf05f[m Put correct url on loan settlement form
+[32m|[m * [33m23a856d[m Update the balance on the loans table on each repaymens
+[32m|[m * [33m194facb[m Show notification if the settlement form has not been set
+[32m|[m * [33m6c7b951[m Revert on Payments
+[32m|[m * [33ma213814[m Show correct deduction loan aduration for each successfull approval
+* [33m|[m [33mfb7df84[m Merge pull request #16 from chandachewe10/dev
+[34m|[m[33m\[m[33m|[m 
+[34m|[m * [33m9417931[m Fixed Issue on token mismatch or token expires on log out
+[34m|[m * [33mc72d36e[m Fix Issue on Loan repayments
+[34m|[m * [33m35111c5[m Add Loan Number on the tables list
+[34m|[m * [33ma0dbda5[m Modify Messeage for loan approval
+[34m|[m * [33m21496cb[m Modify Messeage for loan approval
+* [35m|[m [33m2874740[m Merge pull request #15 from chandachewe10/dev
+[36m|[m[35m\[m[35m|[m 
+[36m|[m * [33m77e7e5d[m Fixed Issue on SMS
+* [1;31m|[m [33mc2b3311[m Fixed Issue on Loan Settlement Forms
+* [1;31m|[m [33m560478e[m Merge pull request #11 from chandachewe10/dev
+[1;32m|[m[1;31m\[m[1;31m|[m 
+[1;32m|[m * [33m1e2ac9e[m Checking SWIFT-SMS using 1 and not using Active
+[1;32m|[m[1;32m/[m  
+*   [33m77052c0[m Merge pull request #10 from chandachewe10/dev
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m30a5459[m Updated README.md
+[1;34m|[m[1;34m/[m  
+*   [33m30a8574[m Merge pull request #9 from chandachewe10/dev
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33m7be5e82[m Update README.md
+[1;36m|[m *   [33mc655f77[m Merge pull request #8 from chandachewe10/main
+[1;36m|[m [32m|[m[1;36m\[m  
+[1;36m|[m [32m|[m[1;36m/[m  
+[1;36m|[m[1;36m/[m[32m|[m   
+* [32m|[m [33mdd2aa5d[m Update README.md
+* [32m|[m [33m79621bf[m Merge pull request #7 from chandachewe10/dev
+[34m|[m[32m\[m[32m|[m 
+[34m|[m * [33md12c399[m Update README.md
+[34m|[m[34m/[m  
+* [33mdadf329[m Update README.d'
+* [33mcf2b8b4[m Update README.d'
+* [33m61e598d[m Updated README.md
+* [33mf921163[m Added README.md
+* [33me0faa39[m Added README.md
+* [33mab1a046[m Added Missing Badges
+* [33mb74b267[m Fixed Issue on Loan settlement Foem
+* [33m4f7e196[m Changed settlement form from unique to null
+* [33m926ebeb[m Fixed Issue on repayments if the balance is grater than 0
+* [33mfa754b3[m show expenses rightly on the graph
+* [33m735d70d[m Ignore unique fields on editing
+* [33m5b51608[m Fixed Issue on Loan Agreement Forms
+* [33mdf112a1[m Fixed Issue on Loan Number
+* [33m68c0bb2[m Fixed Issue on Loan Number
+* [33m201ded0[m Fixed Issue on loan edit
+* [33m119a195[m Add badge on loan status
+* [33m9e82634[m Fixed Issue on Adding Borrower
+* [33mc7f2719[m Fixed Issue on Loan Updates
+* [33m96e66b8[m Fixed Issue on sending Loan SMS on SWIFT-SM
+* [33me35d1da[m Assign roles to users
+* [33m604530d[m Added roles and Permissions
+* [33m740e679[m Integrated with SWIFT-SMS
+* [33m59abf8a[m View third Party
+* [33m5d49365[m Create third Party
+* [33m659f525[m Added Third Party Table
+* [33m715988a[m Added Filters
+* [33m4984a89[m Added Filters
+* [33m88f2ae6[m Added Filters
+* [33mcb7980d[m Added Analytics
+* [33ma2fb546[m Added stats on dashboard
+* [33mbd017df[m Added Settlement Forms
+* [33m6604603[m Added repayments functionalities
+* [33m8b9c041[m Added Create Page For Repayments
+* [33m0f86048[m Dont Commit Uploads/Files
+* [33ma160215[m Fixed Issue on Compiling Loan Agreement Form
+* [33mcc2772c[m Fixed Issue on not showing the Loan Agreement Form
+* [33m87482dc[m Parse Loan Agreement as html for display
+* [33mbe0d1ff[m Loan Agreement Form Created Succesfully
+* [33m61c098b[m Add Wallet Expense on View
+* [33m0f35d10[m Added transactions table
+* [33m152df81[m Create wallets
+* [33m63a782d[m Added Fully and Partially Paid Loans Custom Pages
+* [33m3785c37[m Added Defaulted Loans
+* [33m800b2b6[m Added Pending Loans
+* [33mcefdb13[m Put Active Loans in NavigationGriup
+* [33mbef12cd[m Added Active Loans
+* [33m210534a[m Added Loan Due Date Date
+* [33m5dd2362[m Fixed Issue on Loan Armotization
+* [33mff9c815[m Improved Filter Accuracy
+* [33mf2bfb00[m Prefix Icons to all Form Fields
+* [33m1562682[m Added Loan Type
+* [33m999dd03[m Completed Borrower CRUD
+* [33m59fd2d8[m Added Model preparation For Media
+* [33m8c71c5a[m Initial Commit
